@@ -1,0 +1,217 @@
+.overlay-board {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.add-new-board-modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 322px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  z-index: 20;
+}
+.add-new-board-modal .add-new-board-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 1.8rem;
+  background-color: #FFFFFF;
+}
+.add-new-board-modal .add-new-board-content h3 {
+  margin-top: 1.5rem;
+}
+.add-new-board-modal .add-new-board-content p {
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.add-new-board-modal .add-new-board-content .board-input-name {
+  position: relative;
+  margin: 0.2em;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  transition: border-color 0.3s;
+  width: 100%;
+}
+.add-new-board-modal .add-new-board-content .board-input-name::-moz-placeholder {
+  color: #828FA3;
+}
+.add-new-board-modal .add-new-board-content .board-input-name::placeholder {
+  color: #828FA3;
+}
+.add-new-board-modal .add-new-board-content .board-input-name:hover {
+  border-color: #635FC7;
+}
+.add-new-board-modal .add-new-board-content .board-input-name:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-board-modal .add-new-board-content .column-input {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.add-new-board-modal .add-new-board-content .column-input input {
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  width: 90%;
+  transition: border-color 0.3s;
+}
+.add-new-board-modal .add-new-board-content .column-input input:hover {
+  border-color: #635FC7;
+}
+.add-new-board-modal .add-new-board-content .column-input input:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-board-modal .add-new-board-content .column-input input::-moz-placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-board-modal .add-new-board-content .column-input input::placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-board-modal .add-new-board-content .column-input svg {
+  cursor: pointer;
+  margin-left: 1rem;
+  fill: #828FA3;
+}
+.add-new-board-modal .add-new-board-content .error {
+  border: 1px solid #EA5555;
+  color: #EA5555;
+}
+.add-new-board-modal .add-new-board-content .error-text-board {
+  position: absolute;
+  right: 25px;
+  top: 105px;
+  transform: translateY(-50%);
+  color: #EA5555;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+.add-new-board-modal .add-new-board-content .error-text-board-length {
+  color: #EA5555;
+  padding-left: 0.6em;
+  font-weight: normal;
+  margin-top: 0rem;
+}
+.add-new-board-modal .add-new-board-content .error-text-column {
+  position: absolute;
+  right: 65px;
+  top: 170px;
+  transform: translateY(-50%);
+  color: #EA5555;
+  font-size: 1.2rem;
+}
+.add-new-board-modal .add-new-board-content button {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
+}
+.add-new-board-modal .add-new-board-content .btn-add-new-board {
+  background-color: #E4EBFA;
+  color: #635FC7;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.add-new-board-modal .add-new-board-content .btn-add-new-board:hover {
+  background-color: #F4F7FD;
+}
+.add-new-board-modal .add-new-board-content .btn-create-new-board {
+  margin-bottom: 2rem;
+  background-color: #635FC7;
+  color: #FFFFFF;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.add-new-board-modal .add-new-board-content .btn-create-new-board:hover {
+  background-color: #A8A4FF;
+}
+
+.delete-board-modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 322px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+.delete-content {
+  margin: 2.5rem;
+  background-color: #2B2C37;
+}
+.delete-content .delete-title {
+  color: #EA5555;
+}
+.delete-content .delete-text {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #828FA3;
+}
+.delete-content .modal-actions-btns {
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.delete-content .modal-actions-btns button {
+  height: 40px;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.delete-content .modal-actions-btns .btn-delete {
+  background-color: #EA5555;
+  color: #FFFFFF;
+}
+.delete-content .modal-actions-btns .btn-delete:hover {
+  background-color: #FF9898;
+}
+.delete-content .modal-actions-btns .btn-cancel {
+  margin-top: 2rem;
+  background-color: #F4F7FD;
+  color: #635FC7;
+}
+
+@media (min-width: 768px) {
+  .overlay-board {
+    display: none;
+  }
+  .add-new-board-modal {
+    width: 480px;
+    top: 250px;
+  }
+  .delete-board-modal {
+    top: 300px;
+    width: 480px;
+  }
+  .delete-board-modal .delete-content .modal-actions-btns {
+    display: flex;
+    flex-direction: row;
+  }
+  .delete-board-modal .delete-content .modal-actions-btns button {
+    margin: 1rem;
+  }
+}/*# sourceMappingURL=addNewBoards.css.map */

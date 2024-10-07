@@ -1,0 +1,387 @@
+@charset "UTF-8";
+.add-new-task-modal-overlay {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 322px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  z-index: 30;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1.8rem;
+  z-index: 31;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content h3 {
+  margin-top: 1.5rem;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content p {
+  margin-bottom: 0.8rem;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-name {
+  position: relative;
+  transition: border-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-name:hover {
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-name:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .error {
+  border: 1px solid #EA5555;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .error::-moz-placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .error::placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-description {
+  height: 135px;
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  resize: none;
+  line-height: 2;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition: border-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-description::-moz-placeholder {
+  text-align: left;
+  color: rgba(130, 143, 163, 0.25);
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-description::placeholder {
+  text-align: left;
+  color: rgba(130, 143, 163, 0.25);
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-description:hover {
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .task-input-description:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content p {
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content input {
+  margin: 0.2em;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+}
+.add-new-task-modal-overlay .add-new-task-modal-content input::-moz-placeholder {
+  color: rgba(130, 143, 163, 0.25);
+}
+.add-new-task-modal-overlay .add-new-task-modal-content input::placeholder {
+  color: rgba(130, 143, 163, 0.25);
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs {
+  margin-top: 0.5rem;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs .column-input {
+  display: flex;
+  align-items: center;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs input {
+  margin-bottom: 0.8rem;
+  width: 85%;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  transition: border-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs input:hover {
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs input:hover {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs svg {
+  cursor: pointer;
+  margin-left: 1rem;
+  fill: #828FA3;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs .error {
+  border: 1px solid #EA5555;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs .error::-moz-placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs .error::placeholder {
+  color: #EA5555;
+  text-align: right;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .column-inputs img {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content button {
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .btn-add-new-subtask {
+  color: #635FC7;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .btn-add-new-subtask:hover {
+  background-color: #E4EBFA;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content select {
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/icon-chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  transition: border-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content select:hover {
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content select:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content select option {
+  border: none;
+  color: #828FA3;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .btn-create-task {
+  background-color: #635FC7;
+  color: #FFFFFF;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.add-new-task-modal-overlay .add-new-task-modal-content .btn-create-task:hover {
+  background-color: #A8A4FF;
+}
+
+.task-details-modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 322px;
+  max-height: 80vh;
+  margin: 0 auto;
+  z-index: 20;
+}
+.task-details-modal .task-details-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 1.8rem;
+}
+.task-details-modal .task-details-content .task-details-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-details-modal .task-details-content .task-details-name img {
+  padding: 1rem;
+  cursor: pointer;
+}
+.task-details-modal .task-details-content .task-details-name .task-options-btn {
+  border: none;
+  background: none;
+}
+.task-details-modal .task-details-content .task-details-name .options-modal-task {
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  width: 180px;
+  border-radius: 4px;
+  z-index: 1500;
+}
+.task-details-modal .task-details-content .task-details-name .options-modal-task .options-content-task {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.task-details-modal .task-details-content .task-details-name .options-modal-task .options-content-task button {
+  padding: 1.3rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+.task-details-modal .task-details-content .task-details-name .options-modal-task .options-content-task .options-edit-btn {
+  color: #828FA3;
+}
+.task-details-modal .task-details-content .task-details-name .options-modal-task .options-content-task .options-delete-btn {
+  color: #EA5555;
+}
+.task-details-modal .task-details-content .description {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #828FA3;
+}
+.task-details-modal .task-details-content .substask-text {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.task-details-modal .task-details-content .task-subtasks {
+  margin-top: 2rem;
+}
+.task-details-modal .task-details-content .subtask-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  padding: 1.6rem;
+  font-weight: bold;
+}
+.task-details-modal .task-details-content .subtask-item input[type=checkbox] {
+  margin-right: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0.5em;
+  border: 1px #828FA3 solid;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+.task-details-modal .task-details-content .subtask-item input[type=checkbox]:checked {
+  background-color: #635FC7;
+}
+.task-details-modal .task-details-content .subtask-item input[type=checkbox]:checked::before {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+.task-details-modal .task-details-content .subtask-item.completed {
+  color: #828FA3;
+  text-decoration: line-through;
+}
+.task-details-modal .task-details-content select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/icon-chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding: 1rem;
+  margin-top: 1rem;
+  transition: border-color 0.3s;
+  border: 1px #828FA3 solid;
+}
+.task-details-modal .task-details-content select:focus {
+  outline: none;
+  border-color: #635FC7;
+}
+.task-details-modal .task-details-content select option {
+  color: #828FA3;
+}
+.task-details-modal .task-details-content select:hover {
+  border-color: #635FC7;
+}
+
+.delete-task-modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 322px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+.delete-content {
+  display: block;
+  margin: 2.5rem;
+  background-color: #2B2C37;
+}
+.delete-content .delete-title {
+  color: #EA5555;
+}
+.delete-content .delete-text {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #828FA3;
+}
+.delete-content .modal-actions-btns {
+  margin-top: 2rem;
+  width: 100%;
+}
+.delete-content .modal-actions-btns button {
+  height: 40px;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.delete-content .modal-actions-btns .btn-delete {
+  margin-top: 2rem;
+  background-color: #EA5555;
+  color: #FFFFFF;
+}
+.delete-content .modal-actions-btns .btn-delete:hover {
+  background-color: #FF9898;
+}
+.delete-content .modal-actions-btns .btn-cancel {
+  margin-top: 2rem;
+  background-color: #F4F7FD;
+  color: #635FC7;
+}
+
+@media (min-width: 768px) {
+  .task-details-modal {
+    width: 480px;
+    padding: 1.5rem;
+    top: 200px;
+  }
+  .add-new-task-modal-overlay {
+    width: 480px;
+  }
+  .delete-task-modal {
+    display: flex;
+    top: 200px;
+    width: 480px;
+  }
+  .delete-task-modal .delete-content .modal-actions-btns {
+    display: flex;
+    flex-direction: row;
+  }
+  .delete-task-modal .delete-content .modal-actions-btns button {
+    margin: 1rem;
+  }
+}/*# sourceMappingURL=task.css.map */

@@ -1,0 +1,293 @@
+.nav-bar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 20;
+}
+.nav-bar .nav-left,
+.nav-bar .nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .nav-logo-mobile {
+  height: 25px;
+  margin: 1rem;
+}
+.nav-bar .nav-title-kanban {
+  display: none;
+}
+.nav-bar .nav-title-board {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.nav-bar .nav-chevron-icon-mobile {
+  padding-top: 0.5em;
+  width: 15px;
+  cursor: pointer;
+}
+.nav-bar .nav-add-task-button-mobile {
+  margin-right: 1rem;
+  width: 48px;
+  height: 32px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #635FC7;
+}
+.nav-bar .nav-add-task-button-screen {
+  display: none;
+}
+.nav-bar .show-sidebar-box {
+  display: none;
+}
+.nav-bar .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.nav-bar .nav-ellipsis-icon {
+  background: none;
+  padding: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.nav-bar .nav-sidebar-icon-screen {
+  display: none;
+}
+.nav-bar .options-modal {
+  position: absolute;
+  padding: 0.5rem;
+  top: 60px;
+  right: 20px;
+  width: 190px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+.nav-bar .options-modal .options-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.nav-bar .options-modal .options-content button {
+  padding: 1.3rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.nav-bar .options-modal .options-content .options-edit-btn {
+  color: #828FA3;
+}
+.nav-bar .options-modal .options-content .options-delete-btn {
+  color: #EA5555;
+}
+.nav-bar .nav-options-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+}
+
+.board-nav-overlay {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 264px;
+  border: none;
+  overflow-y: auto;
+  margin: 0 auto;
+  z-index: 10;
+  max-height: 800px;
+}
+.board-nav-overlay .nav-title-kanban {
+  display: none;
+}
+.board-nav-overlay .board-count-text {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: #828FA3;
+  margin: 2rem;
+}
+.board-nav-overlay .btn-add-new-board {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 48px;
+  text-align: left;
+  background-color: #FFFFFF;
+  color: #635FC7;
+  font-weight: bold;
+  border: none;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  border-radius: 0px 25px 25px 0px;
+  transition: 0.3s;
+}
+.board-nav-overlay .btn-add-new-board svg {
+  margin-left: 2rem;
+  margin-right: 1.2rem;
+  fill: #635FC7;
+  transition: fill 0.3s;
+}
+.board-nav-overlay .btn-add-new-board:hover {
+  background-color: #635FC7;
+  color: #FFFFFF;
+}
+.board-nav-overlay .btn-add-new-board:hover svg {
+  fill: #FFFFFF;
+}
+.board-nav-overlay .btn-new-board {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 48px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  border-radius: 0px 25px 25px 0px;
+  transition: 0.3s;
+}
+.board-nav-overlay .btn-new-board svg {
+  margin-left: 2rem;
+  margin-right: 1.2rem;
+  fill: #828FA3;
+  transition: fill 0.3s;
+}
+.board-nav-overlay .btn-new-board:hover {
+  background-color: #635FC7;
+  color: #FFFFFF;
+}
+.board-nav-overlay .btn-new-board:hover svg {
+  fill: #FFFFFF;
+}
+.board-nav-overlay .dark-mode-boxes {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 2rem;
+  border-radius: 0px 6px 6px 0px;
+}
+.board-nav-overlay .dark-mode-boxes .dark-mode-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 90%;
+}
+.board-nav-overlay .dark-mode-boxes .dark-mode-box img {
+  padding: 0 1rem;
+}
+
+.hide-sidebar-box {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    padding: 2rem;
+    position: fixed;
+  }
+  .nav-bar .nav-logo-mobile {
+    display: none;
+  }
+  .nav-bar .nav-title-kanban {
+    display: flex;
+    align-items: center;
+    width: 244px;
+  }
+  .nav-bar .nav-title-board {
+    padding-left: 3rem;
+  }
+  .nav-bar .nav-add-task-button-mobile {
+    display: none;
+  }
+  .nav-bar .nav-add-task-button-screen {
+    display: block;
+    margin-right: 1rem;
+    width: 190px;
+    height: 48px;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    border: none;
+    background-color: #635FC7;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .nav-bar .nav-add-task-button-screen:hover {
+    background-color: #A8A4FF;
+  }
+  .nav-bar .nav-chevron-icon-mobile {
+    display: none;
+  }
+  .nav-bar .show-sidebar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 830px;
+    left: 0;
+    width: 56px;
+    height: 48px;
+    border-radius: 0 25px 25px 0;
+    background-color: #635FC7;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  .nav-bar .show-sidebar-box .nav-sidebar-icon-screen {
+    display: block;
+    padding: 3rem;
+  }
+  .nav-bar .show-sidebar-box:hover {
+    background-color: #A8A4FF;
+  }
+  .board-nav-overlay {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+    min-width: 264px;
+    max-height: 1800px;
+    border-radius: 0 0 0 0;
+  }
+  .board-nav-overlay .nav-title-kanban {
+    display: block;
+    padding: 3rem 2rem;
+  }
+  .dark-mode-boxes {
+    margin-top: 20rem;
+  }
+  .hide-sidebar-box {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 2rem;
+    cursor: pointer;
+  }
+  .hide-sidebar-box p {
+    padding-left: 1rem;
+    color: #828FA3;
+  }
+}/*# sourceMappingURL=nav.css.map */

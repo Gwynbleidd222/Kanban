@@ -1,0 +1,163 @@
+@import '../../sass/colors';
+
+.main-content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 4rem;
+	
+	
+	.main-text {
+		margin-top: 10rem;
+		font-weight: bold;
+		text-align: center;
+		font-size: 1.8rem;
+		color: $gray;
+	}
+
+	.btn-add-main {
+		width: 174px;
+		height: 48px;
+		background-color: $purple;
+		color: $white;
+		font-weight: bold;
+		border: none;
+		font-size: 1.6rem;
+		cursor: pointer;
+		border-radius: 25px;
+		transition: 0.3s;
+		margin-top: 2rem;
+
+		&:hover {
+			background-color: $white;
+			color: $purple;
+		}
+	}
+}
+
+.columns-container {
+	.ul-columns {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		list-style: none;
+		overflow-x: auto;
+		white-space: nowrap;
+		font-weight: bold;
+		color: $gray;
+		height: 100vh;
+
+		.li-columns {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			margin-top: 6rem;
+
+			&:nth-of-type(3n + 1) .circle {
+				background-color: #49c4e5;
+			}
+
+			&:nth-of-type(3n + 2) .circle {
+				background-color: $purple;
+			}
+
+			&:nth-of-type(3n + 3) .circle {
+				background-color: #67e2ae;
+			}
+
+			.li-box {
+				display: flex;
+				align-items: center;
+				box-sizing: border-box;
+				letter-spacing: 2px;
+				padding-left: 2rem;
+				width: 280px;
+
+				.circle {
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+
+					margin-top: 2rem;
+				}
+
+				h3 {
+					margin-top: 2rem;
+					font-size: 1.6rem;
+					padding-left: 1rem;
+				}
+			}
+		}
+
+		.ul-task {
+			margin-top: 1rem;
+		}
+	}
+
+	.add-new-column-btn {
+		display: none;
+		padding: 3.5rem;
+		width: 280px;
+		margin: 2.5rem;
+		font-size: 2.5rem;
+		font-weight: bold;
+		border-radius: 8px;
+
+		color: $gray;
+		border: none;
+		cursor: pointer;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $purple;
+		}
+	}
+
+	.task-box {
+		margin: 2rem;
+		padding: 2rem;
+		background-color: $white;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		margin-top: 2rem;
+		text-align: left;
+		width: 280px;
+		color: $gray;
+		letter-spacing: 0px;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.task-title {
+			font-size: 1.6rem;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+			white-space: pre-wrap;
+		}
+
+		.task-subtasks {
+			font-size: 1.2rem;
+			color: $gray;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.columns-container {
+		.ul-columns {
+			margin-top: 8rem;
+
+			.li-columns {
+				margin-top: 1rem;
+			}
+
+			.add-new-column-btn {
+				display: block;
+				margin-top: 8rem;
+				height: 800px;
+			}
+		}
+	}
+}

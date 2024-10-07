@@ -1,0 +1,443 @@
+@import '../../sass/colors';
+
+.add-new-task-modal-overlay {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	border-radius: 12px;
+	width: 322px;
+	max-height: 80vh;
+	overflow-y: auto;
+	margin: 0 auto;
+	z-index: 30;
+	
+	.add-new-task-modal-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 1.8rem;
+		z-index: 31;
+		
+
+		h3 {
+			margin-top: 1.5rem;
+		}
+
+		p {
+			margin-bottom: 0.8rem;
+		}
+
+		.task-input-name {
+			position: relative;
+			transition: border-color 0.3s;
+
+			&:hover {
+				border-color: $purple;
+			}
+
+			&:focus {
+				outline: none;
+				border-color: $purple;
+			}
+		}
+
+		.error {
+			border: 1px solid $red;
+
+			&::placeholder {
+				color: $red;
+				text-align: right;
+			}
+		}
+
+		
+
+		.task-input-description {
+			height: 135px;
+			text-align: left;
+			vertical-align: top;
+			padding: 1rem;
+			resize: none;
+			line-height: 2;
+			border: 1px solid rgba(130, 143, 163, 0.25);
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			transition: border-color 0.3s;
+
+			&::placeholder {
+				text-align: left;
+				color: rgba(130, 143, 163, 0.25);
+			}
+
+			&:hover {
+				border-color: $purple;
+			}
+
+			&:focus {
+				outline: none;
+				border-color: $purple;
+			}
+		}
+
+		p {
+			margin-top: 1.8rem;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+
+		input {
+			margin: 0.2em;
+			padding: 1rem;
+			border-radius: 4px;
+			border: 1px solid rgba(130, 143, 163, 0.25);
+
+			&::placeholder {
+				color: rgba(130, 143, 163, 0.25);
+			}
+		}
+
+		.column-inputs {
+			margin-top: 0.5rem;
+			
+			.column-input {
+				display: flex;
+				align-items: center;
+			}
+
+			input {
+				margin-bottom: 0.8rem;
+				width: 85%;
+				border: 1px solid rgba(130, 143, 163, 0.25);
+				transition: border-color 0.3s;
+
+				&:hover {
+					border-color: $purple;
+				}
+
+				&:hover {
+					outline: none;
+					border-color: $purple;
+				}
+
+			}
+
+			svg {
+				cursor: pointer;
+				margin-left: 1rem;
+				fill: $gray;
+			}
+			
+			.error {
+				border: 1px solid $red;
+
+				&::placeholder {
+					color: $red;
+					text-align: right;
+				}
+			}
+
+			img {
+				margin-left: 1rem;
+				cursor: pointer;
+			}
+		}
+
+		button {
+			padding: 1rem;
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+		}
+
+		.btn-add-new-subtask {
+			color: $purple;
+			font-weight: bold;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $light-gray;
+			}
+		}
+
+		select {
+			border: 1px solid rgba(130, 143, 163, 0.25);
+			padding: 1rem;
+			margin-bottom: 2rem;
+			transition: border-color 0.3s;
+			appearance: none;
+			background-image: url('../../assets/icon-chevron-down.svg');
+			background-repeat: no-repeat;
+			background-position: right 1rem center;
+			transition: border-color 0.3s;
+
+			&:hover {
+				border-color: $purple;
+			}
+
+			&:focus {
+				outline: none;
+				border-color: $purple;
+			}
+		}
+
+		select option {
+			border: none;
+			color: $gray;
+		}
+
+		.btn-create-task {
+			background-color: $purple;
+			color: $white;
+			font-weight: bold;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $light-purple;
+			}
+		}
+	}
+}
+
+.task-details-modal {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	border-radius: 12px;
+	width: 322px;
+	max-height: 80vh;
+	margin: 0 auto;
+	z-index: 20;
+
+	.task-details-content {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin: 1.8rem;
+
+		.task-details-name {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			img {
+				padding: 1rem;
+				cursor: pointer;
+			}
+
+			.task-options-btn {
+				border: none;
+				background: none;
+			}
+
+			.options-modal-task {
+				position: absolute;
+				top: 60px;
+				right: -40px;
+				width: 180px;
+				border-radius: 4px;
+				z-index: 1500;
+
+				.options-content-task {
+					display: flex;
+					justify-content: flex-start;
+					flex-direction: column;
+
+					button {
+						padding: 1.3rem;
+						border: none;
+						background: none;
+						cursor: pointer;
+						text-align: left;
+					}
+
+					.options-edit-btn {
+						color: $gray;
+					}
+
+					.options-delete-btn {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		.description {
+			margin-top: 2rem;
+			font-size: 1.2rem;
+			color: $gray;
+		}
+
+		.substask-text {
+			margin-top: 2rem;
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		.task-subtasks {
+			margin-top: 2rem;
+		}
+
+		.subtask-item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.8rem;
+			font-size: 1.2rem;
+			padding: 1.6rem;
+
+			font-weight: bold;
+			
+
+			input[type='checkbox'] {
+				margin-right: 1rem;
+				appearance: none; 
+				width: 16px;
+				height: 16px;
+				border: none;
+				padding: 0.5em;
+				border: 1px $gray solid;
+				border-radius: 3px;
+				cursor: pointer;
+				position: relative;
+
+				&:checked {
+					background-color: $purple;
+
+					&::before {
+						content: '✓'; // Dodajemy ptaszka
+						color: white;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 12px;
+					}
+				}
+			}
+
+			&.completed {
+				color: $gray;
+				text-decoration: line-through;
+			}
+		}
+		select {
+			appearance: none;
+			background-image: url('../../assets/icon-chevron-down.svg');
+			background-repeat: no-repeat;
+			background-position: right 1rem center;
+			padding: 1rem;
+			margin-top: 1rem;
+			transition: border-color 0.3s;
+			border: 1px $gray solid;
+
+			&:focus {
+				outline: none;
+				border-color: $purple;
+			}
+
+			option {
+				color: $gray;
+			}
+
+			&:hover {
+				border-color: $purple;
+			}
+		}
+	}
+}
+
+.delete-task-modal {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	border-radius: 12px;
+	width: 322px;
+	max-height: 80vh;
+	overflow-y: auto;
+	margin: 0 auto;
+	z-index: 20;
+}
+
+.delete-content {
+	display: block;
+	margin: 2.5rem;
+	background-color: $gray-black;
+
+	.delete-title {
+		color: $red;
+	}
+
+	.delete-text {
+		margin-top: 2rem;
+		font-size: 1.3rem;
+		color: $gray;
+	}
+
+	.modal-actions-btns {
+		margin-top: 2rem;
+		width: 100%;
+
+		button {
+			height: 40px;
+			width: 100%;
+			border-radius: 25px;
+			border: none;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.btn-delete {
+			margin-top: 2rem;
+			background-color: $red;
+			color: $white;
+
+			&:hover {
+				background-color: $light-red;
+			}
+		}
+
+		.btn-cancel {
+			margin-top: 2rem;
+			background-color: $very-light-gray;
+			color: $purple;
+		}
+	}
+}
+
+
+@media(min-width: 768px) {
+	.task-details-modal {
+		width: 480px;
+		padding: 1.5rem;
+		top: 200px;
+	}
+
+	.add-new-task-modal-overlay {
+		width: 480px;
+		
+	}
+
+	.delete-task-modal {
+		display: flex;
+		top: 200px;
+		width: 480px;
+
+		.delete-content {
+			
+			.modal-actions-btns {
+				display: flex;
+				flex-direction: row;
+
+				button {
+					margin: 1rem;
+				}
+			}
+		}
+
+	}
+}

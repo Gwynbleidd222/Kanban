@@ -1,0 +1,207 @@
+@import '../sass/colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	background-color: $very-light-gray;
+}
+
+.light-mode {
+	background-color: $white;
+	color: $black;
+}
+
+.dark-mode {
+	background-color: $black;
+}
+
+.custom-dark-mode-component.light {
+	background-color: $white;
+}
+
+.custom-dark-mode-component.dark {
+	background-color: $gray-black;
+}
+
+.custom-dark-mode-component-options.light {
+	background-color: $white;
+}
+.custom-dark-mode-component-options.dark {
+	background-color: $dark-gray-black;
+}
+
+.custom-dark-mode-component-boards {
+	background-color: $white;
+	color: $gray;
+}
+
+.custom-dark-mode-component-boards.light {
+	background-color: $white;
+	color: $gray;
+}
+
+.custom-dark-mode-component-boards.dark {
+	background-color: $gray-black;
+}
+
+.custom-dark-mode-component-boards-new {
+	background-color: $white;
+	color: $purple;
+}
+
+.custom-dark-mode-component-boards-new.light {
+	background-color: $white;
+	color: $purple;
+}
+
+.custom-dark-mode-component-boards-new.dark {
+	background-color: $gray-black;
+}
+
+.custom-text-element {
+	color: $white;
+}
+
+.custom-dark-mode-component.dark-mode {
+	background-color: $gray-black;
+}
+
+.dark .custom-text-element {
+	color: $white; /* Kolor tekstu w trybie ciemnym */
+}
+
+.light .custom-text-element {
+	color: $black; /* Kolor tekstu w trybie jasnym */
+}
+
+.custom-board-columns {
+	color: $gray;
+}
+
+.dark .custom-board-columns {
+	color: $white;
+}
+
+.light .custom-board-columns {
+	color: $gray;
+}
+
+.custom-switch {
+	background-color: $very-light-gray;
+}
+
+.dark .custom-switch {
+	background-color: $dark-gray-black;
+	margin: 0 auto;
+}
+
+.light .custom-switch {
+	background-color: $very-light-gray;
+}
+
+.input-dark-mode {
+	background-color: $white;
+	color: $black;
+	border: 1px solid $light-gray;
+}
+
+.dark .input-dark-mode {
+	background-color: $gray-black;
+	color: $white;
+	border: 1px solid $gray;
+}
+
+.light .input-dark-mode {
+	background-color: $white;
+	color: $black;
+}
+
+.secondary-btn-dark-mode {
+	background-color: rgba(99, 95, 199, 0.1);
+}
+
+.dark .secondary-btn-dark-mode {
+	background-color: $white;
+}
+
+.light .secondary-btn-dark-mode {
+	background-color: rgba(99, 95, 199, 0.1);
+}
+
+.checked-dark-mode {
+	background-color: $light-gray;
+	color: $gray;
+}
+
+.dark .checked-dark-mode {
+	background-color: $dark-gray-black;
+	transition: background-color 0.3s;
+	color: $white;
+
+	&:hover {
+		background-color: $purple;
+		color: $white;
+	}
+}
+
+.light .checked-dark-mode {
+	background-color: $light-gray;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $light-purple;
+		color: $black;
+	}
+}
+
+@media (min-width: 768px) {
+	.app-container {
+		transition: margin-left 0.3s ease;
+		margin-left: 0;
+	}
+
+	.app-container.board-nav-opened {
+		margin-left: 264px;
+	}
+
+	.main-content-screen {
+		display: flex;
+		flex-direction: row;
+		height: 100vh;
+		width: 100%;
+	}
+
+	.main-content-screen.center-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main {
+		flex-grow: 1;
+	}
+
+	.screen-border.light {
+		border-right: 1px solid $light-gray;
+		border-bottom: 1px solid $light-gray;
+	}
+	
+	.screen-border.dark {
+		border-right: 1px solid $dark-gray;
+		border-bottom: 1px solid $dark-gray;
+	}
+}
+
