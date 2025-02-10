@@ -1,14 +1,13 @@
 .main-content {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   padding: 4rem;
 }
 .main-content .main-text {
   margin-top: 10rem;
   font-weight: bold;
+  text-align: center;
   font-size: 1.8rem;
   color: #828FA3;
 }
@@ -122,9 +121,6 @@
 }
 
 @media (min-width: 768px) {
-  .main-content {
-    height: 100%;
-  }
   .columns-container .ul-columns {
     margin-top: 8rem;
   }

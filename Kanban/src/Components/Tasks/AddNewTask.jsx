@@ -4,7 +4,6 @@ import '../../Components/Tasks/task.scss'
 import { v4 as uuidv4 } from 'uuid'
 import { TaskContext } from './TaskContext'
 import { useDarkMode } from '../../Context/DarkModeContext'
-import crossIcon from '../../assets/icon-cross.svg'
 import { useBoards } from '../BoardsContext/BoardsContext'
 import IconCross from '../Icon/IconCross'
 

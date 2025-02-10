@@ -178,6 +178,11 @@ body {
     height: 100vh;
     width: 100%;
   }
+  .main-content-screen.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .main {
     flex-grow: 1;
   }

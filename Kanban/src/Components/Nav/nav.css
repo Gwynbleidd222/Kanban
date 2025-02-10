@@ -242,6 +242,7 @@
     display: none;
   }
   .nav-bar .show-sidebar-box {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,9 +267,8 @@
     position: fixed;
     top: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     min-width: 264px;
-    max-height: 1800px;
     border-radius: 0 0 0 0;
   }
   .board-nav-overlay .nav-title-kanban {
