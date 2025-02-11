@@ -1,1 +1,8 @@
-This project is a Kanban-style task management web application built primarily with React. Users can organize their tasks into different columns, such as "Todo," "In Progress," and "Completed." The app allows adding, editing, and deleting tasks, making it easy to manage and track progress. It also features a Dark Mode and Light Mode toggle for a customizable user experience. The application is fully responsive, providing an optimal experience across desktop and mobile devices. This project is based on the Frontend Mentor Kanban Task Management Web App Challenge.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
